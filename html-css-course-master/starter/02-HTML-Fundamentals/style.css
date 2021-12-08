@@ -1,13 +1,15 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
+/* Universal selector - Has the lowest priority */
+* {
+  /* border-top: 10px solid #1098ad; */
 }
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
+}
+
 h1 {
-  color: blue;
   font-size: 26px;
   text-transform: uppercase;
   font-style: italic;
@@ -60,3 +62,91 @@ article header p {
 .related-posts {
   list-style: none;
 }
+
+header {
+  background-color: #c6dd40;
+}
+
+.main-header {
+  background-color: blueviolet;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid cadetblue;
+  border-bottom: 5px solid cadetblue;
+}
+/* 
+body {
+  background-color: chartreuse; */
+/* } */
+
+/* -----Pseudo-classes---------- */
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/* li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-weight: bold;
+}
+
+li:nth-child(odd) {
+  color: rgb(0, 4, 255);
+}
+li:nth-child(2) {
+  color: red;
+} */
+
+/* This is a misconception. It won't work */
+article p:first-child {
+  color: red;
+}
+/* this one will */
+/* article p:last-child {
+  color: red;
+} */
+
+/* ----- Syling Links  LVHA ---------- */
+a:link {
+  color: #1098ad;
+  text-decoration: none; /*remove underline from links*/
+}
+a:visited {
+  /* color: #777; */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* ----- Resolving conflicts ---------- */
+
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+  color: green !important;
+} */
